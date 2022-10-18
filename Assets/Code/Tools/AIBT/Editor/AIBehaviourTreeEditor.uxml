@@ -1,0 +1,24 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Code/Tools/AIBT/Editor/AIBehaviourTreeEditor.uss?fileID=7433441132597879392&amp;guid=ad5a8a5c7272dd84e98e33eeb5d3f55e&amp;type=3#AIBehaviourTreeEditor" />
+    <uie:Toolbar>
+        <uie:ToolbarMenu display-tooltip-when-elided="true" text="Assets" />
+    </uie:Toolbar>
+    <AISplitView fixed-pane-initial-dimension="300">
+        <ui:VisualElement name="LeftPan">
+            <AISplitView orientation="Vertical" fixed-pane-initial-dimension="300" style="border-left-color: rgb(196, 196, 196); border-right-color: rgb(196, 196, 196); border-top-color: rgb(196, 196, 196); border-bottom-color: rgb(196, 196, 196);">
+                <ui:VisualElement name="Inspector">
+                    <ui:Label text="Inspector" display-tooltip-when-elided="true" style="background-color: rgb(32, 32, 32); -unity-font-style: bold;" />
+                    <AIInspectorView />
+                </ui:VisualElement>
+                <ui:VisualElement name="Blackboard">
+                    <ui:Label text="BlackBoard" display-tooltip-when-elided="true" style="background-color: rgb(32, 32, 32); -unity-font-style: bold;" />
+                    <ui:IMGUIContainer />
+                </ui:VisualElement>
+            </AISplitView>
+        </ui:VisualElement>
+        <ui:VisualElement name="RightPan">
+            <ui:Label text="Tree View" display-tooltip-when-elided="true" style="-unity-font-style: bold; background-color: rgb(56, 56, 56); color: rgb(56, 56, 56);" />
+            <AIBehaviourTreeView focusable="true" style="flex-grow: 1;" />
+        </ui:VisualElement>
+    </AISplitView>
+</ui:UXML>

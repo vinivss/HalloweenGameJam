@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Code/Tools/AIBT/Editor/AINodeViewStyle.uss?fileID=7433441132597879392&amp;guid=0e6541d5c76815a4fb5755f2a949e6a5&amp;type=3#AINodeViewStyle" />
+    <ui:VisualElement name="node-state" />
+    <ui:VisualElement name="node-border" style="border-left-color: rgb(40, 40, 40); border-right-color: rgb(40, 40, 40); border-top-color: rgb(40, 40, 40); border-bottom-color: rgb(40, 40, 40); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px;">
+        <ui:VisualElement name="contents">
+            <ui:VisualElement name="top">
+                <ui:VisualElement name="input" />
+                <ui:VisualElement name="title" style="align-items: center;">
+                    <ui:Label name="title-label" text="SequencerNode" class="unity-text-element unity-label" />
+                    <ui:VisualElement name="title-button-container">
+                        <ui:VisualElement name="collapse-button">
+                            <ui:VisualElement name="icon" />
+                        </ui:VisualElement>
+                        <ui:Label text="Description" display-tooltip-when-elided="true" name="Description" style="align-items: center; -unity-text-align: upper-center; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 0; border-right-width: 0; border-top-width: 1px; border-bottom-width: 0; padding-top: 2px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="output" />
+        </ui:VisualElement>
+        <ui:VisualElement name="selection-border" picking-mode="Ignore" />
+    </ui:VisualElement>
+</ui:UXML>
