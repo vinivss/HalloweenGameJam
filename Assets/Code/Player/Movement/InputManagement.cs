@@ -14,10 +14,16 @@ public class InputManagement : MonoBehaviour
     [Header("Camera")]
     [SerializeField] Camera cam;
 
+    [Header("Drag")]
+    [SerializeField] float groundDrag = 6f;
+    [SerializeField] float airDrag = 3f;
+
     FPSControls inputs;
     Vector2 currentMove;
     Vector2 camDelta;
+    float playerHeight = 2f;
     bool jumpPerform;
+    bool isGrounded;
     int jumps = 0;
 
     Vector3 moveDir;
@@ -48,21 +54,51 @@ public class InputManagement : MonoBehaviour
         {
             jumpPerform = ctx.ReadValueAsButton();
         };
+        inputs.Player.Jump.canceled += ctx =>
+        {
+            jumpPerform = ctx.ReadValueAsButton();
+        };
     }
+
+    private void Update()
+    {
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight / 2 + 0.1f);
+
+        ControlDrag();
+    }
+
 
     private void FixedUpdate()
     {
         MoveCharacter();
         
-        if(jumpPerform && jumps < maxJumps)
+        if(jumpPerform && jumps < maxJumps && isGrounded)
         {
             CharacterJump();
         }
+
+        if(isGrounded && jumps > 0)
+        {
+            jumps = 0;
+        }
     }
 
+    void ControlDrag()
+    {
+        if (isGrounded)
+        {
+            Rb.drag = groundDrag;
+        }
+
+        else
+        {
+            Rb.drag = airDrag;
+        }
+    }
     private void CharacterJump()
     {
-        Rb.AddForce(0f, jumpStrength, 0f, ForceMode.Impulse);
+        Debug.Log("JUmpu desu");
+        Rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
     }
 
     private void MoveCharacter()
