@@ -51,15 +51,16 @@ public class AIBehaviourTreeEditor : EditorWindow
         treeView = root.Q<AIBehaviourTreeView>();
         inspectorView = root.Q<AIInspectorView>();
         blackboardView = root.Q<IMGUIContainer>();
-        if (treeObject != null)
-        {
+       
             blackboardView.onGUIHandler = () =>
             {
+
+                
                 treeObject.Update();
                 EditorGUILayout.PropertyField(blackboardProperty);
                 treeObject.ApplyModifiedProperties();
             };
-        }
+        
         treeView.OnNodeSelected = OnNodeSelectionChanged;
         OnSelectionChange();
     }

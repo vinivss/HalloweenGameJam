@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InputManagement : MonoBehaviour
 {
@@ -32,6 +33,9 @@ public class InputManagement : MonoBehaviour
     [Tooltip("layer for ground to be detected")]
     [SerializeField] LayerMask groundMask;
 
+    [Header("Shoot")]
+    public UnityEvent OnShoot;
+
     FPSControls inputs;
     Vector2 currentMove;
     Vector2 camDelta;
@@ -39,6 +43,7 @@ public class InputManagement : MonoBehaviour
     [HideInInspector]public bool jumpPerform;
     bool isGrounded;
     int jumps = 0;
+
 
     Vector3 moveDir;
     Vector3 slopeMoveDir;
@@ -74,6 +79,10 @@ public class InputManagement : MonoBehaviour
         inputs.Player.Jump.canceled += ctx =>
         {
             jumpPerform = ctx.ReadValueAsButton();
+        };
+        inputs.Player.Shoot.performed += ctx =>
+        {
+            OnShoot.Invoke();
         };
     }
 
