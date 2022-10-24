@@ -12,8 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33c47baf7b17b546b34b6d1c3337792, type: 3}
   m_Name: AI Behaviour Tree
   m_EditorClassIdentifier: 
-  rootNode: {fileID: 0}
+  rootNode: {fileID: 1043621320245513492}
   treeState: 0
-  nodes: []
+  nodes:
+  - {fileID: 1043621320245513492}
   board:
     isAlive: 0
+--- !u!114 &1043621320245513492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ecea0b449804c408d452d1949eeded, type: 3}
+  m_Name: AIRootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: d0aea4a7e2ae2784e91cdfb17071cda4
+  position: {x: 0, y: 0}
+  blackboard:
+    isAlive: 0
+  agent: {fileID: 0}
+  Description: 
+  child: {fileID: 0}

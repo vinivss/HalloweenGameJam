@@ -21,7 +21,7 @@ namespace Tools.Trees.AI
         [HideInInspector] public Vector2 position;
         [HideInInspector] public AIBlackBoard blackboard;
         [HideInInspector] public AIAgent agent;
-        [TextArea] public string description;
+        [TextArea] public string Description;
         public State Update()
         {
             if (!started)

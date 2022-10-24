@@ -36,8 +36,6 @@ public class AIBehaviourTreeEditor : EditorWindow
         // Each editor window contains a root VisualElement object
         VisualElement root = rootVisualElement;
 
-
-
         // Import UXML
         var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Code/Tools/AIBT/Editor/AIBehaviourTreeEditor.uxml");
         visualTree.CloneTree(root);

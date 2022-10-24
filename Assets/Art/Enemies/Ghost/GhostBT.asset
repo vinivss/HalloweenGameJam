@@ -15,13 +15,13 @@ MonoBehaviour:
   state: 0
   started: 0
   GUID: 34d6187962d6b7b42ab13a7f31768cc2
-  position: {x: 0, y: 0}
+  position: {x: 0.000014781952, y: 12.549996}
   blackboard:
     isAlive: 0
   agent: {fileID: 0}
-  description: 
-  child: {fileID: 0}
---- !u!114 &-771426881326430025
+  Description: 
+  child: {fileID: -1755173599907247176}
+--- !u!114 &-5975384528630235647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -30,18 +30,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223ce74f3b93d8247905dac2fff4b614, type: 3}
-  m_Name: RepeatNode
+  m_Script: {fileID: 11500000, guid: ac6d5c8515a176946b519d64d1c168b7, type: 3}
+  m_Name: SelectorNode
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  GUID: 95b0722ea31ad0143b4d370ff97b5fce
-  position: {x: 0, y: 118}
+  GUID: 6445aa328ecf7da40beb4aabaf375897
+  position: {x: 0, y: 257}
   blackboard:
     isAlive: 0
   agent: {fileID: 0}
-  description: 
-  child: {fileID: 0}
+  Description: 
+  children:
+  - {fileID: 1466152704712925617}
+--- !u!114 &-1755173599907247176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c27fd977fa6e2b74688e5855fc6845d7, type: 3}
+  m_Name: RepeatIfAlive
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 643ea940bcc52b24fbe681075c58ed0e
+  position: {x: 0, y: 153}
+  blackboard:
+    isAlive: 0
+  agent: {fileID: 0}
+  Description: 
+  child: {fileID: -5975384528630235647}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,6 +80,28 @@ MonoBehaviour:
   treeState: 0
   nodes:
   - {fileID: -8470358048331035460}
-  - {fileID: -771426881326430025}
+  - {fileID: -1755173599907247176}
+  - {fileID: -5975384528630235647}
+  - {fileID: 1466152704712925617}
   board:
     isAlive: 1
+--- !u!114 &1466152704712925617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a752b95571aead47996a19d33fac6bd, type: 3}
+  m_Name: DeathCheck
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: ff7b1547f84712e459a1da3f3d4dc433
+  position: {x: -375, y: 416}
+  blackboard:
+    isAlive: 0
+  agent: {fileID: 0}
+  Description: 
