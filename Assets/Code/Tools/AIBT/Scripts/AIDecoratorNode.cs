@@ -12,7 +12,7 @@ namespace Tools.Trees.AI
         public override AINode Clone()
         {
             AIDecoratorNode node = Instantiate(this);
-            node.child = child;
+            node.child = child.Clone();
             return node;
         }
     }

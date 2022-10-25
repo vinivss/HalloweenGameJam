@@ -8,5 +8,7 @@ namespace Tools.Trees.AI
     public class AIBlackBoard
     {
         public bool isAlive;
+        public Vector3 targetOffset;
+        public GameObject player;
     }
 }

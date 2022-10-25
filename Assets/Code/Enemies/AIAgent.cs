@@ -29,6 +29,7 @@ public class AIAgent : MonoBehaviour
     [HideInInspector] public AggroRange aggroRange;
     [HideInInspector] public MeleeRange MsensorRange;
     [HideInInspector] public RangedRange RsensorRange;
+  public PlayerOverlapsphere playerOverlap;
     //public variables
     public List<Transform> waypoints = new List<Transform>();
     [Tooltip("Navmesh for the AiAgent")]
@@ -67,6 +68,7 @@ public class AIAgent : MonoBehaviour
         RsensorRange = GetComponent<RangedRange>();
         MsensorRange = GetComponent<MeleeRange>();
         currentHealth = HealthMax;
+        playerOverlap = GetComponent<PlayerOverlapsphere>();
         
         //make sure that on start all ragdolls are deactivated
         StartRigidbodies();
@@ -80,7 +82,7 @@ public class AIAgent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animator.SetFloat("Speed", navMesh.velocity.magnitude);
+       // animator.SetFloat("Speed", navMesh.velocity.magnitude);
         transform = gameObject.transform;
     }
     void OnTriggerEnter(Collider other)
@@ -130,4 +132,9 @@ public class AIAgent : MonoBehaviour
         currentHealth -= amount;
     }
 
+    public GameObject FindPlayerinScene()
+    {
+
+        return GameObject.FindGameObjectWithTag("Player");
+    }
 }

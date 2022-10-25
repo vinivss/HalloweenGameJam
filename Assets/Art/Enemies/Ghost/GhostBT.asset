@@ -15,12 +15,14 @@ MonoBehaviour:
   state: 0
   started: 0
   GUID: 34d6187962d6b7b42ab13a7f31768cc2
-  position: {x: 0.000014781952, y: 12.549996}
+  position: {x: 0.000009775162, y: -46.537758}
   blackboard:
     isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
   agent: {fileID: 0}
   Description: 
-  child: {fileID: -1755173599907247176}
+  child: {fileID: 8036014419352318064}
 --- !u!114 &-5975384528630235647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34,15 +36,65 @@ MonoBehaviour:
   m_Name: SelectorNode
   m_EditorClassIdentifier: 
   state: 0
-  started: 0
+  started: 1
   GUID: 6445aa328ecf7da40beb4aabaf375897
-  position: {x: 0, y: 257}
+  position: {x: 0, y: 322}
   blackboard:
-    isAlive: 0
+    isAlive: 1
+    targetOffset: {x: 1.1394098, y: -0.071993604, z: -0.40116733}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: Repeat this main loop as long if not dead
+  children:
+  - {fileID: 1466152704712925617}
+  - {fileID: -3379465695954714516}
+--- !u!114 &-3379465695954714516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bae177942135b14c91efd7f80faf0a5, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 1
+  GUID: dd62da1d72fb8a445a4381b785efdd21
+  position: {x: 0, y: 513}
+  blackboard:
+    isAlive: 1
+    targetOffset: {x: 1.1394098, y: -0.071993604, z: -0.40116733}
+    player: {fileID: 0}
   agent: {fileID: 0}
   Description: 
   children:
-  - {fileID: 1466152704712925617}
+  - {fileID: 4509301313226200187}
+  - {fileID: 2922691148670767998}
+--- !u!114 &-2336247821730887257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b359fb78465e6314486570a5d5a59eef, type: 3}
+  m_Name: SetPlayerBlackboard
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 17bc2ac00b4db3442aea315d21e6b07c
+  position: {x: -483, y: 177}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
 --- !u!114 &-1755173599907247176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,11 +108,13 @@ MonoBehaviour:
   m_Name: RepeatIfAlive
   m_EditorClassIdentifier: 
   state: 0
-  started: 0
+  started: 1
   GUID: 643ea940bcc52b24fbe681075c58ed0e
-  position: {x: 0, y: 153}
+  position: {x: 0.000028133392, y: 177}
   blackboard:
-    isAlive: 0
+    isAlive: 1
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
   agent: {fileID: 0}
   Description: 
   child: {fileID: -5975384528630235647}
@@ -83,8 +137,16 @@ MonoBehaviour:
   - {fileID: -1755173599907247176}
   - {fileID: -5975384528630235647}
   - {fileID: 1466152704712925617}
+  - {fileID: 7091525824128812642}
+  - {fileID: 8036014419352318064}
+  - {fileID: -3379465695954714516}
+  - {fileID: 4509301313226200187}
+  - {fileID: 2922691148670767998}
+  - {fileID: -2336247821730887257}
   board:
     isAlive: 1
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
 --- !u!114 &1466152704712925617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,11 +159,106 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a752b95571aead47996a19d33fac6bd, type: 3}
   m_Name: DeathCheck
   m_EditorClassIdentifier: 
-  state: 0
+  state: 1
   started: 0
   GUID: ff7b1547f84712e459a1da3f3d4dc433
-  position: {x: -375, y: 416}
+  position: {x: -188, y: 513}
   blackboard:
-    isAlive: 0
+    isAlive: 1
+    targetOffset: {x: 1.1394098, y: -0.071993604, z: -0.40116733}
+    player: {fileID: 0}
   agent: {fileID: 0}
   Description: 
+--- !u!114 &2922691148670767998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d9aa1cc9767b7b46ba9e4604812bbe5, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 1
+  GUID: cc6e796b85397534181cb88a22d621b8
+  position: {x: 0, y: 656}
+  blackboard:
+    isAlive: 1
+    targetOffset: {x: 1.1394098, y: -0.071993604, z: -0.40116733}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: time before new scan
+  duration: 1
+--- !u!114 &4509301313226200187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3e0177f02c5bd845b7d8e5aeb6902f1, type: 3}
+  m_Name: GhostFollowTarget
+  m_EditorClassIdentifier: 
+  state: 2
+  started: 0
+  GUID: 3e97afc47ee8534449b05ca0b2958361
+  position: {x: -169.9999, y: 655.99994}
+  blackboard:
+    isAlive: 1
+    targetOffset: {x: 1.1394098, y: -0.071993604, z: -0.40116733}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+--- !u!114 &7091525824128812642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43d5421c75d33d947b32024543f25e55, type: 3}
+  m_Name: GetTransformInSphere
+  m_EditorClassIdentifier: 
+  state: 2
+  started: 0
+  GUID: 03510ef41dde19242aeba3560a285cef
+  position: {x: -254, y: 177}
+  blackboard:
+    isAlive: 1
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+--- !u!114 &8036014419352318064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bae177942135b14c91efd7f80faf0a5, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 1
+  GUID: 400cefa91177ddb4798982fc64fd4a79
+  position: {x: 0, y: 47}
+  blackboard:
+    isAlive: 1
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+  children:
+  - {fileID: -2336247821730887257}
+  - {fileID: 7091525824128812642}
+  - {fileID: -1755173599907247176}

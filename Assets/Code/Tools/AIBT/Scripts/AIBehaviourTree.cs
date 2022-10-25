@@ -142,7 +142,10 @@ namespace Tools.Trees.AI
             AIBehaviourTree tree = Instantiate(this);
             tree.rootNode = tree.rootNode.Clone();
             tree.nodes = new List<AINode>();
-            Traverse(tree.rootNode, (n) => tree.nodes.Add(n));
+            Traverse(tree.rootNode, (n) =>
+            {
+                tree.nodes.Add(n);
+            });
             return tree;
         }
 

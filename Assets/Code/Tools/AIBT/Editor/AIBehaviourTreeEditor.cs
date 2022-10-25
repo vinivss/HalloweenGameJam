@@ -110,7 +110,7 @@ public class AIBehaviourTreeEditor : EditorWindow
         }
         if (Application.isPlaying)
         {
-            if (tree)
+            if (tree != null && treeView!= null)
             {
                 treeView.PopulateView(tree);
             }

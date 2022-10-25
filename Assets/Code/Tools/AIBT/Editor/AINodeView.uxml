@@ -11,7 +11,7 @@
                         <ui:VisualElement name="collapse-button">
                             <ui:VisualElement name="icon" />
                         </ui:VisualElement>
-                        <ui:Label text="Description" display-tooltip-when-elided="true" name="Description" style="align-items: center; -unity-text-align: upper-center; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 0; border-right-width: 0; border-top-width: 1px; border-bottom-width: 0; padding-top: 2px;" />
+                        <ui:Label text="Description" display-tooltip-when-elided="true" name="Description" style="align-items: center; -unity-text-align: upper-center; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 0; border-right-width: 0; border-top-width: 1px; border-bottom-width: 0; padding-top: 2px; flex-wrap: nowrap; white-space: normal;" />
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>

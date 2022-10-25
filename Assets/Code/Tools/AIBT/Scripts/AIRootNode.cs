@@ -25,7 +25,7 @@ namespace Tools.Trees.AI
         public override AINode Clone()
         {
             AIRootNode node = Instantiate(this);   
-            node.child = child; 
+            node.child = child.Clone(); 
             return node;
         }
     }

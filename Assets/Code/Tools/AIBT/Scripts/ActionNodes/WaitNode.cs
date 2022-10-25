@@ -7,7 +7,7 @@ using Tools.Trees.AI;
 //wait for N seconds
 public class WaitNode : AIActionNode
 {
-    [Min(0)] float duration = 1;
+    [Min(0)] public float duration = 1;
     float startTime;
 
     protected override void OnStart()
