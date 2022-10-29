@@ -51,26 +51,18 @@ public class WallRun : MonoBehaviour
         CheckWall();
         if(CanWallRun())
         {
-            if(wallLeft)
+            if(wallLeft || wallRight)
             {
                 StartWallRun();
-                Debug.Log("On Your Left");
+                
             } 
-            if (wallRight)
-            {
-                StartWallRun();
-                Debug.Log("On Your Right");
-            }
 
             else
             {
                 EndWallRun();
             }
         }
-        else
-        {
-            EndWallRun();
-        }
+
     }
 
     void CheckWall()
@@ -93,7 +85,8 @@ public class WallRun : MonoBehaviour
         rb.AddForce(Vector3.down * wallGravity, ForceMode.Force);
         if(wallLeft)
         {
-            cam.m_Lens.Dutch = -dutchAngle;
+            //Debug.Log("left Dutch");
+            cam.m_Lens.Dutch = dutchAngle * -1.0f;
         }
 
         else if(wallRight)
@@ -103,7 +96,8 @@ public class WallRun : MonoBehaviour
         if (input.jumpPerform)
         {
             if (wallLeft)
-            { 
+            {
+                Debug.Log("left Wall Run");
                 Vector3 wallJumpDir = transform.up + leftWallHit.normal;
                 rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
                 rb.AddForce(wallJumpDir * wallJumpStrength * 100, ForceMode.Force);
@@ -114,7 +108,6 @@ public class WallRun : MonoBehaviour
             {
                 Vector3 wallJumpDir = transform.up + rightWallHit.normal;
                 rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-
                 rb.AddForce(wallJumpDir * wallJumpStrength * 100, ForceMode.Force);
                 cam.m_Lens.Dutch = 0.0f;
             }

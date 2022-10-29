@@ -1476,13 +1476,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d59f441c68d8fa42b1137b046dd20cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 6
-  jumpStrength: 5
+  movespeed: 10
+  jumpStrength: 8
   maxJumps: 1
-  airMultiplier: 0.4
+  airMultiplier: 0.2
   cam: {fileID: 963194227}
-  groundDrag: 6
-  airDrag: 0.1
+  groundDrag: 5
+  airDrag: 2
   groundCheckPos: {fileID: 1781175690}
   groundDistance: 0.2
   groundMask:
@@ -1505,15 +1505,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orientation: {fileID: 963194228}
-  wallDistance: 0.6
+  wallDistance: 0.8
   minimumJumpHeight: 1
   WallChecks:
     serializedVersion: 2
     m_Bits: 64
   wallGravity: 1
-  wallJumpStrength: 3
+  wallJumpStrength: 0.75
   cam: {fileID: 1344654612}
-  dutchAngle: 8
+  dutchAngle: 15
 --- !u!1 &2119272164
 GameObject:
   m_ObjectHideFlags: 0
