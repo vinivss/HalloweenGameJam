@@ -55,14 +55,14 @@ ModelImporter:
       takeName: trumpet_idle_anim.001
       internalID: 0
       firstFrame: 0
-      lastFrame: 39
+      lastFrame: 36
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -112,7 +112,7 @@ ModelImporter:
       name: trumpet_attack_1E
       takeName: trumpet_attack_1E.001
       internalID: 0
-      firstFrame: 0
+      firstFrame: 3.1
       lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0
@@ -120,7 +120,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
