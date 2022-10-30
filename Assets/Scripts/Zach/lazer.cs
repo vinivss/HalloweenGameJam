@@ -6,6 +6,7 @@ public class lazer : MonoBehaviour
 {
     public int damage = 15;
     public float lifetime;
+    public GameObject particle;
     void Start()
     {
         StartCoroutine(wait());
@@ -30,13 +31,14 @@ public class lazer : MonoBehaviour
         } 
         if(canhit == true)
         {
+            Instantiate(particle, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
 
     IEnumerator wait()
     {
-        yield return new WaitForSeconds(.01f);
+        yield return new WaitForSeconds(.1f);
         canhit = true;
     }
 

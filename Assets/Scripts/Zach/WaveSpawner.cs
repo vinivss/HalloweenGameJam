@@ -23,9 +23,9 @@ public class WaveSpawner : MonoBehaviour
     {
         EnemiesAlive = GameObject.FindGameObjectsWithTag("Enemy").Length;
         Debug.Log("EnemiesAlive: " + EnemiesAlive);
-        if (level == 16)
+        if (level >= waves.Length)
         {
-            //WinLevel();
+            WinLevel();
         }
         if (EnemiesAlive > 0)
         {
@@ -46,7 +46,6 @@ public class WaveSpawner : MonoBehaviour
     {
         level = 0;
         waveIndex = 0;
-        this.enabled = false;
         SceneManager.LoadScene(SceneNumber);
     }
     IEnumerator SpawnWave()

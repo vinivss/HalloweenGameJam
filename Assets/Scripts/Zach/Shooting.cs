@@ -23,10 +23,10 @@ public class Shooting : MonoBehaviour
     public bool buffer = false;
 
     public Animator m_Animator;
+    public AirBar breathBar;
 
-    
 
-    // Update is called once per frame
+        // Update is called once per frame
     void Update()
     {
         //if(attacking == false)
@@ -65,11 +65,13 @@ public class Shooting : MonoBehaviour
             }
         }
         //Debug.Log("breathmeter: " + breathmeter);
+
+        breathBar.SetBreath(breathmeter);
     }
     IEnumerator Regen()
     {
         buffer = true;
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.1f);
         breathmeter += replenishRate;
         buffer = false;
     }
