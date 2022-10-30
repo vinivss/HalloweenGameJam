@@ -815,7 +815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adfd52aa2bf4ca64591cc2842e72405c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 2.5
+  distance: 10
   angle: 40
   height: 1
   meshColr: {r: 1, g: 0, b: 1, a: 1}
@@ -1688,7 +1688,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6560f0b12d691a249952d799e937160a, type: 2}
+  - {fileID: 2100000, guid: 5f8209ed4266c634ba4f59b07dad7b0c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
