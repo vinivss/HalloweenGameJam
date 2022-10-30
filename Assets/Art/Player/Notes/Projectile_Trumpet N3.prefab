@@ -76,6 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 15
   lifetime: 5
+  particle: {fileID: 7206028125718173996, guid: c48fb26c751e7bd449d6cb1d9e4c30c1, type: 3}
 --- !u!54 &6974691533496940475
 Rigidbody:
   m_ObjectHideFlags: 0
