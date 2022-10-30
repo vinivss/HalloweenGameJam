@@ -5,7 +5,9 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     public Camera cam;
-    public GameObject projectile;
+    GameObject projectile;
+    public GameObject[] projectiles;
+
     public Transform barrel;
     public float projectileSpeed = 30;
     private float timeToFire;
@@ -98,6 +100,9 @@ public class Shooting : MonoBehaviour
     
     void InstantiateProjectile(Transform firePoint)
     {
+        int spawnIndex = Random.Range(0, projectiles.Length);
+        projectile = projectiles[spawnIndex];
+
         var projectileObj = Instantiate(projectile, firePoint.position, Quaternion.LookRotation(destination - firePoint.position)) as GameObject;
         projectileObj.GetComponent<Rigidbody>().velocity = (destination - firePoint.position).normalized * projectileSpeed + rb.velocity;
         //transform.forward * (bulletSpeed + rigidbody.velocity.magnitude * 0.5)
