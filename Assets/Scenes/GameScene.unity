@@ -5962,7 +5962,7 @@ MonoBehaviour:
   - {fileID: 1530782961855818657, guid: 17cb051bf26812346a281c43cbcd9232, type: 3}
   barrel: {fileID: 1346665127}
   projectileSpeed: 32
-  fireRate: 20
+  fireRate: 3
   reloadtime: 2.2
   rb: {fileID: 1128057161}
   replenishRate: 5

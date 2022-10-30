@@ -1,5 +1,149 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8520304565876319286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ecea0b449804c408d452d1949eeded, type: 3}
+  m_Name: AIRootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: c05f4a0190b3d254c895cd1f4e6a7f4a
+  position: {x: 0, y: 0}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+  child: {fileID: -1747595531277963667}
+--- !u!114 &-7459969901072894966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bae177942135b14c91efd7f80faf0a5, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 2c9cec05172a2514e90ae444efd6a4b0
+  position: {x: -148, y: 716}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: If in Ranged Range and not melee range
+  children:
+  - {fileID: 5367742717446841313}
+  - {fileID: 2198521593687248025}
+--- !u!114 &-2478089186372365690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bae177942135b14c91efd7f80faf0a5, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 175720b25877d9041bc38ea1ba2b237c
+  position: {x: -488, y: 716}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: If within neither Melee Or ranged
+  children:
+  - {fileID: 488739174932280768}
+  - {fileID: 7454909912443537137}
+  - {fileID: 2587759219561317113}
+--- !u!114 &-1747595531277963667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bae177942135b14c91efd7f80faf0a5, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 86b122a9e17e6ee4f8eb69d2d1d3c183
+  position: {x: 0, y: 135}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+  children:
+  - {fileID: 78905874172726784}
+  - {fileID: 4415246122197575013}
+  - {fileID: 5921911823735238265}
+--- !u!114 &-1747060688751885027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd847bb2b6ebdbd4092c1cc8b07829e9, type: 3}
+  m_Name: RangedSensorChecker
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 95d71e37449bd674085930988df7abd6
+  position: {x: -645.00006, y: 1056}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+--- !u!114 &-208529603042336749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a231d0fc5ac084991911a2b08b8cc8, type: 3}
+  m_Name: MeleeSensorChecker
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 87bbe8dc65f23bb41b3eb2a4a14107ec
+  position: {x: -816, y: 1056}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,10 +156,277 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33c47baf7b17b546b34b6d1c3337792, type: 3}
   m_Name: Skeleton
   m_EditorClassIdentifier: 
-  rootNode: {fileID: 0}
+  rootNode: {fileID: -8520304565876319286}
   treeState: 0
-  nodes: []
+  nodes:
+  - {fileID: -8520304565876319286}
+  - {fileID: -1747595531277963667}
+  - {fileID: 78905874172726784}
+  - {fileID: 5921911823735238265}
+  - {fileID: 4415246122197575013}
+  - {fileID: 8181402669225029786}
+  - {fileID: 8944671967355200418}
+  - {fileID: -2478089186372365690}
+  - {fileID: 488739174932280768}
+  - {fileID: 7454909912443537137}
+  - {fileID: -208529603042336749}
+  - {fileID: -1747060688751885027}
+  - {fileID: 2587759219561317113}
+  - {fileID: -7459969901072894966}
+  - {fileID: 7986566851601106270}
+  - {fileID: 5367742717446841313}
+  - {fileID: 2198521593687248025}
   board:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+--- !u!114 &78905874172726784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b359fb78465e6314486570a5d5a59eef, type: 3}
+  m_Name: SetPlayerBlackboard
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: c374a987cee850a48985a7f81b28c346
+  position: {x: -469.37878, y: 252.49998}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+--- !u!114 &488739174932280768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f21b59613119da498f7822e570e66bb, type: 3}
+  m_Name: IfFalse
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 59f1890d671fbea46bd04b318f52b097
+  position: {x: -816, y: 893.00006}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+  child: {fileID: -208529603042336749}
+--- !u!114 &2198521593687248025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd847bb2b6ebdbd4092c1cc8b07829e9, type: 3}
+  m_Name: RangedSensorChecker
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 0743dc2f37a5b9448a7297719e568b60
+  position: {x: -158, y: 893}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+--- !u!114 &2587759219561317113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3e0177f02c5bd845b7d8e5aeb6902f1, type: 3}
+  m_Name: GhostFollowTarget
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: f5dedbbaf415d06428e3efb6abb69b32
+  position: {x: -462, y: 917}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+--- !u!114 &4415246122197575013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43d5421c75d33d947b32024543f25e55, type: 3}
+  m_Name: GetTransformInSphere
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 12053f4f3f598264d949b91fbe20a970
+  position: {x: -258.54877, y: 252.99998}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+--- !u!114 &5367742717446841313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f21b59613119da498f7822e570e66bb, type: 3}
+  m_Name: IfFalse
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 4bba754459aba42418e8be80cc6e2a2f
+  position: {x: -308, y: 893}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+  child: {fileID: 7986566851601106270}
+--- !u!114 &5921911823735238265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c27fd977fa6e2b74688e5855fc6845d7, type: 3}
+  m_Name: RepeatIfAlive
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: cb02827c64072504aae5ec619a696268
+  position: {x: 0, y: 285}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+  child: {fileID: 8181402669225029786}
+--- !u!114 &7454909912443537137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f21b59613119da498f7822e570e66bb, type: 3}
+  m_Name: IfFalse
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: de10507cbba017c45accab4fd3df53e3
+  position: {x: -627.00006, y: 893.00006}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+  child: {fileID: -1747060688751885027}
+--- !u!114 &7986566851601106270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a231d0fc5ac084991911a2b08b8cc8, type: 3}
+  m_Name: MeleeSensorChecker
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 63bc229eb7db37a41a549324be26be07
+  position: {x: -316, y: 1024}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+--- !u!114 &8181402669225029786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6d5c8515a176946b519d64d1c168b7, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 1ed9cddc7e0a7184ca1da27e03ca42f8
+  position: {x: 0, y: 442}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+  children:
+  - {fileID: -2478089186372365690}
+  - {fileID: 8944671967355200418}
+  - {fileID: -7459969901072894966}
+--- !u!114 &8944671967355200418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a752b95571aead47996a19d33fac6bd, type: 3}
+  m_Name: DeathCheck
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 16084bfb0aea447449798c266efdfbec
+  position: {x: -430.16, y: 579.71}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
