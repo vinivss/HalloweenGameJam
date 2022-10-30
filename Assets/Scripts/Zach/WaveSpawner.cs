@@ -84,4 +84,14 @@ public class WaveSpawner : MonoBehaviour
         spawnPoint = spawnlist[spawnIndex];
         Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        foreach (var w in spawnlist)
+        {
+            Gizmos.DrawSphere(w.transform.position, 1.0f);
+        };
+    }
+
 }

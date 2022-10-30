@@ -17,11 +17,7 @@ public class PlayerOverlapsphere : MonoBehaviour
     [HideInInspector] public Vector3 targetWaypoint;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
+
 
     public Vector3 AssignCheckpointTransform()
     {

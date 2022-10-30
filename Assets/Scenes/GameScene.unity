@@ -939,6 +939,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 907167622}
+    - target: {fileID: 7328638224780137963, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
+      propertyPath: WallChecks.m_Bits
+      value: 192
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
 --- !u!1 &262347342

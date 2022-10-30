@@ -112,7 +112,7 @@ ModelImporter:
       name: trumpet_attack_1E
       takeName: trumpet_attack_1E.001
       internalID: 0
-      firstFrame: 3.1
+      firstFrame: 19
       lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0
@@ -136,12 +136,12 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 3.1
     - serializedVersion: 16
       name: trumpet_attack_2D
       takeName: trumpet_attack_2D.001
       internalID: 0
-      firstFrame: 0
+      firstFrame: 19
       lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0
@@ -170,7 +170,7 @@ ModelImporter:
       name: trumpet_attack_3A
       takeName: trumpet_attack_3A.001
       internalID: 0
-      firstFrame: 0
+      firstFrame: 19
       lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0

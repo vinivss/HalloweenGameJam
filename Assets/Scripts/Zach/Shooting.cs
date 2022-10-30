@@ -21,10 +21,7 @@ public class Shooting : MonoBehaviour
     public bool buffer = false;
 
     public Animator m_Animator;
-    void Start()
-    {
 
-    }
     
 
     // Update is called once per frame
@@ -65,7 +62,7 @@ public class Shooting : MonoBehaviour
                 breathmeter = 100;
             }
         }
-        Debug.Log("breathmeter: " + breathmeter);
+        //Debug.Log("breathmeter: " + breathmeter);
     }
     IEnumerator Regen()
     {
@@ -108,7 +105,10 @@ public class Shooting : MonoBehaviour
 
     IEnumerator attackCheck()
     {
-        m_Animator.SetInteger("AnimCycle", Random.Range(1, 2));
+        float randomfloat = Random.Range(1.0f, 2.0f);
+        int randomint = (int)Mathf.Round(randomfloat);
+    
+        m_Animator.SetInteger("AnimCycle", randomint);
         yield return new WaitForSeconds(.25f);
         m_Animator.SetBool("Attacking", false);
     }

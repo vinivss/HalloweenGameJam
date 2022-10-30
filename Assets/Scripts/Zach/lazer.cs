@@ -18,16 +18,16 @@ public class lazer : MonoBehaviour
         Destroy(gameObject, lifetime);
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("colliding");
+        Debug.LogError("Colliding");
         if (other.transform.tag == "Enemy")
         {
 
             //other.gameObject.GetComponent<Enemy>().TakeDamage(damage);
             //Destroy(gameObject);
 
-        } else
+        } 
         if(canhit == true)
         {
             Destroy(gameObject);
@@ -36,7 +36,7 @@ public class lazer : MonoBehaviour
 
     IEnumerator wait()
     {
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.01f);
         canhit = true;
     }
 
