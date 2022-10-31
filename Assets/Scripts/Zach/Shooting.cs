@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+
     public Camera cam;
     GameObject projectile;
     public GameObject[] projectiles;
@@ -23,58 +24,61 @@ public class Shooting : MonoBehaviour
     public bool buffer = false;
 
     public Animator m_Animator;
-    public AirBar breathBar;
 
-
-        // Update is called once per frame
+    Rigidbody pRB;
+    private void Awake()
+    {
+        pRB = GetComponent<Rigidbody>();
+    }
     void Update()
     {
+        SetWalkAnim();
+    }
 
-
-
-        //if(attacking == false)
-        //{
-        //    m_Animator.SetBool("Attacking", false);
-        //}
-        if(reloading == false)
+    public void ShootingChecks()
+    {
+        if (reloading == false && breathmeter > meterCost)
         {
-            if (Input.GetMouseButton(0) && Time.time >= timeToFire)
-            {
-                if (breathmeter > meterCost)
-                {
+            timeToFire = Time.time + 1 / fireRate;
+            ShootLazer();
+            m_Animator.SetBool("Attacking", true);
+            StartCoroutine(attackCheck());
+        }
+    }
 
-                    timeToFire = Time.time + 1 / fireRate;
-                    ShootLazer();
-                    m_Animator.SetBool("Attacking", true);
-                    StartCoroutine(attackCheck());
-                }
+    public void ReloadChecks()
+    {
+        if (breathmeter < 100)
+        {
+            if (buffer == false)
+            {
+                StartCoroutine(Regen());
             }
-
-            if (Input.GetMouseButton(1))
-            {
-                StartCoroutine(Reload());
-            }
-
-            if (breathmeter < 100)
-            {
-                if (buffer == false)
-                {
-                    StartCoroutine(Regen());
-                }
-            } 
             else
             {
                 breathmeter = 100;
             }
         }
-        //Debug.Log("breathmeter: " + breathmeter);
-
-        breathBar.SetBreath(breathmeter);
     }
+    //setting up the walking animation
+    public void SetWalkAnim()
+    {
+
+        if (pRB.velocity.x > 0 || pRB.velocity.z > 0)
+        {
+            m_Animator.SetBool("Walking", true);
+        }
+        else if (!(pRB.velocity.x > 0 || pRB.velocity.z > 0))
+        {
+            m_Animator.SetBool("Walking", false);
+        }
+    }
+
+
     IEnumerator Regen()
     {
         buffer = true;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.5f);
         breathmeter += replenishRate;
         buffer = false;
     }
@@ -86,23 +90,24 @@ public class Shooting : MonoBehaviour
         reloading = false;
     }
     void ShootLazer()
+    {
+        Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        RaycastHit hit;
+
+        LayerMask mask = LayerMask.GetMask("shootable");
+        if (Physics.Raycast(ray, out hit, 100, mask))
         {
-            Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-            RaycastHit hit;
 
-            LayerMask mask = LayerMask.GetMask("shootable");
-            if (Physics.Raycast(ray, out hit, 100, mask)) { 
-
-                destination = hit.point;
-            }
-            else
-            {
-                destination = ray.GetPoint(1000);
-            }
-            InstantiateProjectile(barrel);
-            breathmeter -= meterCost;
+            destination = hit.point;
+        }
+        else
+        {
+            destination = ray.GetPoint(1000);
+        }
+        InstantiateProjectile(barrel);
+        breathmeter -= meterCost;
     }
-    
+
     void InstantiateProjectile(Transform firePoint)
     {
         int spawnIndex = Random.Range(0, projectiles.Length);
@@ -117,7 +122,7 @@ public class Shooting : MonoBehaviour
     {
         float randomfloat = Random.Range(1.0f, 2.0f);
         int randomint = (int)Mathf.Round(randomfloat);
-    
+
         m_Animator.SetInteger("AnimCycle", randomint);
         yield return new WaitForSeconds(.25f);
         m_Animator.SetBool("Attacking", false);
