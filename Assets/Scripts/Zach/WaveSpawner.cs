@@ -32,7 +32,7 @@ public class WaveSpawner : MonoBehaviour
         eCount.text = "Enemies Remaining: " + EnemiesAlive;
         wCount.text = "Wave: " + level + "/" + waves.Length;
 
-        Debug.Log("EnemiesAlive: " + EnemiesAlive);
+       // Debug.Log("EnemiesAlive: " + EnemiesAlive);
         if (level >= waves.Length)
         {
             WinLevel();

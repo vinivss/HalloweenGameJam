@@ -29,7 +29,7 @@ public class lazer : MonoBehaviour
     {
         hitPlayer = other.GetComponent<AIAgent>();
 
-        Debug.LogError("Colliding");
+        //Debug.LogError("Colliding");
         if (other.transform.tag == "Enemy")
         {
             hitPlayer.currentHealth -= damage;

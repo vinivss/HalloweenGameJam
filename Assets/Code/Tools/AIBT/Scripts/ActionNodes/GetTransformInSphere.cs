@@ -18,7 +18,7 @@ public class GetTransformInSphere : AIActionNode
     protected override State OnUpdate()
     {
         blackboard.targetOffset = agent.playerOverlap.AssignCheckpointTransform();
-        Debug.Log(blackboard.targetOffset);
+     
 
         return State.SUCC;
     }

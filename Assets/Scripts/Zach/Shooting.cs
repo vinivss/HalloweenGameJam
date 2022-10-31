@@ -33,6 +33,19 @@ public class Shooting : MonoBehaviour
     void Update()
     {
         SetWalkAnim();
+
+        if (breathmeter < 100)
+        {
+            if (buffer == false)
+            {
+                Debug.LogWarning(breathmeter);
+                StartCoroutine(Regen());
+            }
+        }
+        else
+        {
+            breathmeter = 100;
+        }
     }
 
     public void ShootingChecks()
@@ -40,6 +53,7 @@ public class Shooting : MonoBehaviour
         if (reloading == false && breathmeter > meterCost)
         {
             timeToFire = Time.time + 1 / fireRate;
+           
             ShootLazer();
             m_Animator.SetBool("Attacking", true);
             StartCoroutine(attackCheck());
@@ -48,17 +62,7 @@ public class Shooting : MonoBehaviour
 
     public void ReloadChecks()
     {
-        if (breathmeter < 100)
-        {
-            if (buffer == false)
-            {
-                StartCoroutine(Regen());
-            }
-            else
-            {
-                breathmeter = 100;
-            }
-        }
+        StartCoroutine(Reload());
     }
     //setting up the walking animation
     public void SetWalkAnim()
@@ -106,6 +110,7 @@ public class Shooting : MonoBehaviour
         }
         InstantiateProjectile(barrel);
         breathmeter -= meterCost;
+        Debug.Log(breathmeter);
     }
 
     void InstantiateProjectile(Transform firePoint)
@@ -127,9 +132,4 @@ public class Shooting : MonoBehaviour
         yield return new WaitForSeconds(.25f);
         m_Animator.SetBool("Attacking", false);
     }
-
-
-
-
-
 }

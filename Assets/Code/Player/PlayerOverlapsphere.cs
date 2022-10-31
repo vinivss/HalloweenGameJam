@@ -21,12 +21,12 @@ public class PlayerOverlapsphere : MonoBehaviour
 
     public Vector3 AssignCheckpointTransform()
     {
-        Debug.Log("Called");
+       
         Offset = (Random.insideUnitSphere) * radius;
         
         checkpointAssigned = true;
 
-        Debug.Log(Offset);
+        
         return Offset;
     }
 
