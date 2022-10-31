@@ -21,14 +21,16 @@ public class WaveSpawner : MonoBehaviour
     //private Vector3 spawnPos;
     private Transform spawnPoint;
 
-    [SerializeField]
-    private TMP_Text eCount;
+    
+    public TMP_Text eCount;
+    public TMP_Text wCount;
 
     void Update()
     {
         EnemiesAlive = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
-        eCount.text = "enemyes remaining" + EnemiesAlive;
+        eCount.text = "Enemies Remaining: " + EnemiesAlive;
+        wCount.text = "Wave: " + level + "/" + waves.Length;
 
         Debug.Log("EnemiesAlive: " + EnemiesAlive);
         if (level >= waves.Length)
