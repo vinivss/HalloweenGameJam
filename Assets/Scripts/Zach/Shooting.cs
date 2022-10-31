@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    
     public Camera cam;
     GameObject projectile;
     public GameObject[] projectiles;
@@ -24,48 +25,56 @@ public class Shooting : MonoBehaviour
 
     public Animator m_Animator;
 
-    
-
-    // Update is called once per frame
+    Rigidbody pRB;
+    private void Awake()
+    {
+        pRB = GetComponent<Rigidbody>();
+    }
     void Update()
     {
-        //if(attacking == false)
-        //{
-        //    m_Animator.SetBool("Attacking", false);
-        //}
-        if(reloading == false)
+        SetWalkAnim();
+    }
+
+    public void ShootingChecks()
+    {
+        if (reloading == false && breathmeter > meterCost)
         {
-            if (Input.GetMouseButton(0) && Time.time >= timeToFire)
+            timeToFire = Time.time + 1 / fireRate;
+            ShootLazer();
+            m_Animator.SetBool("Attacking", true);
+            StartCoroutine(attackCheck());
+        }
+    }
+    
+    public void ReloadChecks()
+    {
+        if (breathmeter < 100)
+        {
+            if (buffer == false)
             {
-                if (breathmeter > meterCost)
-                {
-
-                    timeToFire = Time.time + 1 / fireRate;
-                    ShootLazer();
-                    m_Animator.SetBool("Attacking", true);
-                    StartCoroutine(attackCheck());
-                }
+                StartCoroutine(Regen());
             }
-
-            if (Input.GetMouseButton(1))
-            {
-                StartCoroutine(Reload());
-            }
-
-            if (breathmeter < 100)
-            {
-                if (buffer == false)
-                {
-                    StartCoroutine(Regen());
-                }
-            } 
             else
             {
                 breathmeter = 100;
             }
         }
-        //Debug.Log("breathmeter: " + breathmeter);
     }
+    //setting up the walking animation
+    public void SetWalkAnim()
+    {
+ 
+        if (pRB.velocity.x > 0 || pRB.velocity.z > 0)
+        {
+            m_Animator.SetBool("Walking", true);
+        }
+        else if (!(pRB.velocity.x > 0 || pRB.velocity.z > 0))
+        {
+            m_Animator.SetBool("Walking", false);
+        }
+    }
+
+
     IEnumerator Regen()
     {
         buffer = true;

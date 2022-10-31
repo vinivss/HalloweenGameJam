@@ -935,6 +935,62 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7328638224780137962, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
+      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328638224780137962, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
+      propertyPath: OnReload.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328638224780137962, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
+      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328638224780137962, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
+      propertyPath: OnReload.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328638224780137962, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
+      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2001551998}
+    - target: {fileID: 7328638224780137962, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
+      propertyPath: OnReload.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2001551998}
+    - target: {fileID: 7328638224780137962, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
+      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328638224780137962, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
+      propertyPath: OnReload.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328638224780137962, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
+      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShootingChecks
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328638224780137962, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
+      propertyPath: OnReload.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReloadChecks
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328638224780137962, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
+      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Shooting, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328638224780137962, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
+      propertyPath: OnReload.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Shooting, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328638224780137962, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
+      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328638224780137962, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
+      propertyPath: OnReload.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7328638224780137963, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
       propertyPath: cam
       value: 
