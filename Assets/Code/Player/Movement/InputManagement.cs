@@ -35,10 +35,7 @@ public class InputManagement : MonoBehaviour
 
     [Header("Shoot")]
     public UnityEvent OnShoot;
-    [Header("Reload")]
-    public UnityEvent OnReload;
 
-    //private Variables
     FPSControls inputs;
     Vector2 currentMove;
     Vector2 camDelta;
@@ -86,10 +83,6 @@ public class InputManagement : MonoBehaviour
         inputs.Player.Shoot.performed += ctx =>
         {
             OnShoot.Invoke();
-        };
-        inputs.Player.Reload.performed += ctx =>
-        {
-            OnReload.Invoke();
         };
     }
 
