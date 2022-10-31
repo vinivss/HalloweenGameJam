@@ -29,6 +29,9 @@ public class Shooting : MonoBehaviour
         // Update is called once per frame
     void Update()
     {
+
+
+
         //if(attacking == false)
         //{
         //    m_Animator.SetBool("Attacking", false);

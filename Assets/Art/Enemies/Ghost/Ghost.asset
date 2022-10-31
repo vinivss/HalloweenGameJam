@@ -16,7 +16,7 @@ MonoBehaviour:
   Boss: 0
   Smart: 0
   HealthMax: 75
-  WalkSpeed: 0.5
+  WalkSpeed: 2
   RunSpeed: 1
   attackRate: 3
   damage: 2

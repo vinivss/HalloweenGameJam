@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3865920dba3b14582d9ee4f3b92c92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
+  damage: 30
   lifetime: 5
   particle: {fileID: 7206028125718173996, guid: c48fb26c751e7bd449d6cb1d9e4c30c1, type: 3}
 --- !u!54 &6974691533496940475

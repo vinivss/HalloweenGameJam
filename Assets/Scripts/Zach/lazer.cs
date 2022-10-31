@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Tools.Trees.AI;
 
 public class lazer : MonoBehaviour
 {
+
+
     public int damage = 15;
     public float lifetime;
     public GameObject particle;
+
+    AIAgent hitPlayer;
+
     void Start()
     {
         StartCoroutine(wait());
@@ -21,12 +27,14 @@ public class lazer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        hitPlayer = other.GetComponent<AIAgent>();
+
         Debug.LogError("Colliding");
         if (other.transform.tag == "Enemy")
         {
-
-            //other.gameObject.GetComponent<Enemy>().TakeDamage(damage);
-            //Destroy(gameObject);
+            hitPlayer.currentHealth -= damage;
+            Debug.Log("enemyHealth:" + hitPlayer.currentHealth);
+            Destroy(gameObject);
 
         } 
         if(canhit == true)

@@ -99,7 +99,7 @@ Material:
     - _EnableDetailMask: 0
     - _EnableTriplanarProjection: 1
     - _GlossMapScale: 0.18
-    - _Glossiness: 0.5
+    - _Glossiness: 0.207
     - _GlossyReflections: 1
     - _IntensityMask: 1
     - _InvertABaseColor: 0
@@ -112,7 +112,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _Source: 0
     - _SpecularHighlights: 1
-    - _SpecularIntensity: 0.2
+    - _SpecularIntensity: 0.091
     - _SpreadDetailMap: 0
     - _SrcBlend: 1
     - _TriplanarFalloff: 20
@@ -128,7 +128,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 0}
     - _DetailSpecularColor: {r: 1, g: 1, b: 1, a: 0}
-    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 4, g: 4, b: 4, a: 1}
     - _GlobalXYTilingXYZWOffsetXY: {r: 1, g: 1, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 0}
     - _TriplanarXYTilingXYZWOffsetXY: {r: 1, g: 1, b: 0, a: 0}

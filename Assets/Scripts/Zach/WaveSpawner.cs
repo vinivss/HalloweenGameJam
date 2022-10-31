@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class WaveSpawner : MonoBehaviour
@@ -19,9 +20,15 @@ public class WaveSpawner : MonoBehaviour
     //private Vector3 spawnPos;
     private Transform spawnPoint;
 
+    [SerializeField]
+    private Text eCount;
+
     void Update()
     {
         EnemiesAlive = GameObject.FindGameObjectsWithTag("Enemy").Length;
+
+        eCount.text = "enemyes remaining" + EnemiesAlive;
+
         Debug.Log("EnemiesAlive: " + EnemiesAlive);
         if (level >= waves.Length)
         {
