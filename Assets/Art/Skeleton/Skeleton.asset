@@ -1,5 +1,52 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8847795912464041941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d57f291fc1ef204db392a65497a7f70, type: 3}
+  m_Name: StopMovement
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 2da182c9811efa54681167c14a19b3f6
+  position: {x: 49, y: 1233}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+    objectToThrow: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+--- !u!114 &-8744492252937337644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b56caa2ab82576499c8cb19a31f442f, type: 3}
+  m_Name: RunAway
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 97054da7a2b110745be0a595b3a0a474
+  position: {x: 623.5207, y: 1044.4999}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+    objectToThrow: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+  RunAwayDist: 10
 --- !u!114 &-8520304565876319286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20,9 +67,36 @@ MonoBehaviour:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
   child: {fileID: -1747595531277963667}
+--- !u!114 &-8488598226877356436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01e0b7357cf808048831674ae088d6b9, type: 3}
+  m_Name: SelectRandomChild
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: a4fd12f0991124a4db4b1b55d7bccbed
+  position: {x: 50, y: 913.5}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+    objectToThrow: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+  children:
+  - {fileID: -5780872448552000859}
+  - {fileID: 8121874362290840732}
 --- !u!114 &-7459969901072894966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43,11 +117,85 @@ MonoBehaviour:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: If in Ranged Range and not melee range
   children:
   - {fileID: 5367742717446841313}
   - {fileID: 2198521593687248025}
+  - {fileID: -8488598226877356436}
+--- !u!114 &-7148406449775813663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bae177942135b14c91efd7f80faf0a5, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 2b3de489a34ed1343b04f12f54f4ce13
+  position: {x: 489.99988, y: 772.5}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+    objectToThrow: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+  children:
+  - {fileID: 4842966428134922016}
+  - {fileID: -8744492252937337644}
+--- !u!114 &-5780872448552000859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3e0177f02c5bd845b7d8e5aeb6902f1, type: 3}
+  m_Name: GhostFollowTarget
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: d0cea227e5df8d749b1d804eb7d6a580
+  position: {x: -38, y: 1074}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+    objectToThrow: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+--- !u!114 &-5211537249334359380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc66f8454c77c4343bd2b1b8e5f76083, type: 3}
+  m_Name: SkeletonThrowAnim
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 87fabb1aba49fcb4db1a03f0c420c5c4
+  position: {x: 212, y: 1233}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+    objectToThrow: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
 --- !u!114 &-2478089186372365690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,6 +216,7 @@ MonoBehaviour:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: If within neither Melee Or ranged
   children:
@@ -94,6 +243,7 @@ MonoBehaviour:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
   children:
@@ -120,6 +270,7 @@ MonoBehaviour:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
 --- !u!114 &-208529603042336749
@@ -142,6 +293,7 @@ MonoBehaviour:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
 --- !u!114 &11400000
@@ -176,10 +328,19 @@ MonoBehaviour:
   - {fileID: 7986566851601106270}
   - {fileID: 5367742717446841313}
   - {fileID: 2198521593687248025}
+  - {fileID: -8488598226877356436}
+  - {fileID: -5780872448552000859}
+  - {fileID: 8121874362290840732}
+  - {fileID: -8847795912464041941}
+  - {fileID: -5211537249334359380}
+  - {fileID: -7148406449775813663}
+  - {fileID: 4842966428134922016}
+  - {fileID: -8744492252937337644}
   board:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
 --- !u!114 &78905874172726784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +361,7 @@ MonoBehaviour:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
 --- !u!114 &488739174932280768
@@ -222,6 +384,7 @@ MonoBehaviour:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
   child: {fileID: -208529603042336749}
@@ -245,6 +408,7 @@ MonoBehaviour:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
 --- !u!114 &2587759219561317113
@@ -267,6 +431,7 @@ MonoBehaviour:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
 --- !u!114 &4415246122197575013
@@ -289,6 +454,30 @@ MonoBehaviour:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+--- !u!114 &4842966428134922016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a231d0fc5ac084991911a2b08b8cc8, type: 3}
+  m_Name: MeleeSensorChecker
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: f3acdbb5db7a53f41bdaff1d3e017902
+  position: {x: 437.74896, y: 1041.4999}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
 --- !u!114 &5367742717446841313
@@ -311,6 +500,7 @@ MonoBehaviour:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
   child: {fileID: 7986566851601106270}
@@ -334,6 +524,7 @@ MonoBehaviour:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
   child: {fileID: 8181402669225029786}
@@ -357,6 +548,7 @@ MonoBehaviour:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
   child: {fileID: -1747060688751885027}
@@ -380,8 +572,35 @@ MonoBehaviour:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
+--- !u!114 &8121874362290840732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bae177942135b14c91efd7f80faf0a5, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 0855a9e5ade001a4db23d046479bd936
+  position: {x: 137, y: 1076.5}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+    objectToThrow: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+  children:
+  - {fileID: -8847795912464041941}
+  - {fileID: -5211537249334359380}
 --- !u!114 &8181402669225029786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,17 +616,19 @@ MonoBehaviour:
   state: 0
   started: 0
   GUID: 1ed9cddc7e0a7184ca1da27e03ca42f8
-  position: {x: 0, y: 442}
+  position: {x: 0.000011920929, y: 452.55008}
   blackboard:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
   children:
   - {fileID: -2478089186372365690}
   - {fileID: 8944671967355200418}
   - {fileID: -7459969901072894966}
+  - {fileID: -7148406449775813663}
 --- !u!114 &8944671967355200418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,5 +649,6 @@ MonoBehaviour:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 

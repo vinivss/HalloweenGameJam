@@ -10,5 +10,6 @@ namespace Tools.Trees.AI
         public bool isAlive;
         public Vector3 targetOffset;
         public GameObject player;
+        public GameObject objectToThrow;
     }
 }

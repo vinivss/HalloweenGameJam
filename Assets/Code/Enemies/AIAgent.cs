@@ -29,13 +29,15 @@ public class AIAgent : MonoBehaviour
     [HideInInspector] public AggroRange aggroRange;
     [HideInInspector] public MeleeRange MsensorRange;
     [HideInInspector] public RangedRange RsensorRange;
-  public PlayerOverlapsphere playerOverlap;
+    public PlayerOverlapsphere playerOverlap;
+   
     //public variables
-    public List<Transform> waypoints = new List<Transform>();
+    //public List<Transform> waypoints = new List<Transform>();
     [Tooltip("Navmesh for the AiAgent")]
     public UnityEngine.AI.NavMeshAgent navMesh;
     [Tooltip("Current Health of the AI")]
     public float currentHealth;
+    public Transform throwPoint;
 
 
     //private variables

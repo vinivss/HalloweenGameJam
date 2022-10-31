@@ -871,6 +871,7 @@ MonoBehaviour:
   - {fileID: 892576575}
   - {fileID: 128819450}
   - {fileID: 308652889}
+  eCount: {fileID: 0}
 --- !u!114 &175925436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8211,7 +8212,6 @@ MonoBehaviour:
   reloading: 0
   buffer: 0
   m_Animator: {fileID: 96439784}
-  breathBar: {fileID: 1218119476}
 --- !u!114 &2001552002
 MonoBehaviour:
   m_ObjectHideFlags: 0
