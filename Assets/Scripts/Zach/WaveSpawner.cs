@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class WaveSpawner : MonoBehaviour
@@ -21,7 +22,7 @@ public class WaveSpawner : MonoBehaviour
     private Transform spawnPoint;
 
     [SerializeField]
-    private Text eCount;
+    private TMP_Text eCount;
 
     void Update()
     {
