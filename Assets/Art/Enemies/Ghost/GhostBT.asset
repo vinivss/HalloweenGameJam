@@ -20,6 +20,7 @@ MonoBehaviour:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
   child: {fileID: 8036014419352318064}
@@ -43,6 +44,7 @@ MonoBehaviour:
     isAlive: 1
     targetOffset: {x: 1.1394098, y: -0.071993604, z: -0.40116733}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: Repeat this main loop as long if not dead
   children:
@@ -68,6 +70,7 @@ MonoBehaviour:
     isAlive: 1
     targetOffset: {x: 1.1394098, y: -0.071993604, z: -0.40116733}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
   children:
@@ -93,6 +96,7 @@ MonoBehaviour:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
 --- !u!114 &-1755173599907247176
@@ -115,6 +119,7 @@ MonoBehaviour:
     isAlive: 1
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
   child: {fileID: -5975384528630235647}
@@ -147,6 +152,7 @@ MonoBehaviour:
     isAlive: 1
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
 --- !u!114 &1466152704712925617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,11 +168,12 @@ MonoBehaviour:
   state: 1
   started: 0
   GUID: ff7b1547f84712e459a1da3f3d4dc433
-  position: {x: -188, y: 513}
+  position: {x: -319.9999, y: 513}
   blackboard:
     isAlive: 1
     targetOffset: {x: 1.1394098, y: -0.071993604, z: -0.40116733}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
 --- !u!114 &2922691148670767998
@@ -189,6 +196,7 @@ MonoBehaviour:
     isAlive: 1
     targetOffset: {x: 1.1394098, y: -0.071993604, z: -0.40116733}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: time before new scan
   duration: 1
@@ -212,6 +220,7 @@ MonoBehaviour:
     isAlive: 1
     targetOffset: {x: 1.1394098, y: -0.071993604, z: -0.40116733}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
 --- !u!114 &7091525824128812642
@@ -234,6 +243,7 @@ MonoBehaviour:
     isAlive: 1
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
 --- !u!114 &8036014419352318064
@@ -256,6 +266,7 @@ MonoBehaviour:
     isAlive: 1
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
+    objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
   children:
