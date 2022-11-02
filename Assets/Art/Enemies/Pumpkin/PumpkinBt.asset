@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8470358048331035460
+--- !u!114 &-8136106248032687939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  GUID: 34d6187962d6b7b42ab13a7f31768cc2
-  position: {x: 0.000009775162, y: -46.537758}
+  GUID: 5a0d1fb11ce140141939b06ab08be450
+  position: {x: 4, y: 57.199997}
   blackboard:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
@@ -23,8 +23,55 @@ MonoBehaviour:
     objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
-  child: {fileID: 8036014419352318064}
---- !u!114 &-5975384528630235647
+  child: {fileID: 4414087160293073678}
+--- !u!114 &-7426163722096809262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d9aa1cc9767b7b46ba9e4604812bbe5, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 7ecaa288aeae3f04b902230ee35e19cd
+  position: {x: 98.99984, y: 747.9999}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+    objectToThrow: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+  duration: 2
+--- !u!114 &-6880320190640141603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43d5421c75d33d947b32024543f25e55, type: 3}
+  m_Name: GetTransformInSphere
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: c6946d9dc262d45449950f798388f655
+  position: {x: -235.20512, y: 299}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+    objectToThrow: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+--- !u!114 &-6873382768412127023
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,20 +84,97 @@ MonoBehaviour:
   m_Name: SelectorNode
   m_EditorClassIdentifier: 
   state: 0
-  started: 1
-  GUID: 6445aa328ecf7da40beb4aabaf375897
-  position: {x: 0, y: 322}
+  started: 0
+  GUID: 5e8f58456137f9847b61bad95e74a9da
+  position: {x: 3.9998634, y: 470.65756}
   blackboard:
-    isAlive: 1
-    targetOffset: {x: 1.1394098, y: -0.071993604, z: -0.40116733}
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
     objectToThrow: {fileID: 0}
   agent: {fileID: 0}
-  Description: Repeat this main loop as long if not dead
+  Description: 
   children:
-  - {fileID: 1466152704712925617}
-  - {fileID: -3379465695954714516}
---- !u!114 &-3379465695954714516
+  - {fileID: 3197620422269050840}
+  - {fileID: 2783160723081599538}
+--- !u!114 &-3248008796419507461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c27fd977fa6e2b74688e5855fc6845d7, type: 3}
+  m_Name: RepeatIfAlive
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 8873c3f0799bcb748a512c144758fabb
+  position: {x: 3.9999104, y: 298.49997}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+    objectToThrow: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+  child: {fileID: -6873382768412127023}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e33c47baf7b17b546b34b6d1c3337792, type: 3}
+  m_Name: PumpkinBt
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -8136106248032687939}
+  treeState: 0
+  nodes:
+  - {fileID: -8136106248032687939}
+  - {fileID: 4414087160293073678}
+  - {fileID: 5587942625317899039}
+  - {fileID: -6880320190640141603}
+  - {fileID: -3248008796419507461}
+  - {fileID: -6873382768412127023}
+  - {fileID: 3197620422269050840}
+  - {fileID: 2783160723081599538}
+  - {fileID: 697784008535947744}
+  - {fileID: -7426163722096809262}
+  board:
+    isAlive: 1
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+    objectToThrow: {fileID: 0}
+--- !u!114 &697784008535947744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3e0177f02c5bd845b7d8e5aeb6902f1, type: 3}
+  m_Name: GhostFollowTarget
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: c590ae398285f6141b798f20ee5c22fb
+  position: {x: -51, y: 748}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+    objectToThrow: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+--- !u!114 &2783160723081599538
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,20 +187,70 @@ MonoBehaviour:
   m_Name: SequencerNode
   m_EditorClassIdentifier: 
   state: 0
-  started: 1
-  GUID: dd62da1d72fb8a445a4381b785efdd21
-  position: {x: 0, y: 513}
+  started: 0
+  GUID: d1b4543729146a34e8bcb6c3856ba9c1
+  position: {x: 4, y: 615}
   blackboard:
-    isAlive: 1
-    targetOffset: {x: 1.1394098, y: -0.071993604, z: -0.40116733}
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
     objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
   children:
-  - {fileID: 4509301313226200187}
-  - {fileID: 2922691148670767998}
---- !u!114 &-2336247821730887257
+  - {fileID: 697784008535947744}
+  - {fileID: -7426163722096809262}
+--- !u!114 &3197620422269050840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a752b95571aead47996a19d33fac6bd, type: 3}
+  m_Name: DeathCheck
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 15e9bfa841a5d9044b86a028ad3825df
+  position: {x: -283, y: 639}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+    objectToThrow: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+--- !u!114 &4414087160293073678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bae177942135b14c91efd7f80faf0a5, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 4ea234c883e2a534b9c0bb440bb74f03
+  position: {x: 4, y: 162.39996}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+    objectToThrow: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+  children:
+  - {fileID: 5587942625317899039}
+  - {fileID: -6880320190640141603}
+  - {fileID: -3248008796419507461}
+--- !u!114 &5587942625317899039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,8 +264,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  GUID: 17bc2ac00b4db3442aea315d21e6b07c
-  position: {x: -483, y: 177}
+  GUID: 59bf888a1321b2641bf213ce3083c6dc
+  position: {x: -389.20508, y: 299}
   blackboard:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
@@ -99,177 +273,3 @@ MonoBehaviour:
     objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
---- !u!114 &-1755173599907247176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c27fd977fa6e2b74688e5855fc6845d7, type: 3}
-  m_Name: RepeatIfAlive
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 1
-  GUID: 643ea940bcc52b24fbe681075c58ed0e
-  position: {x: 0.000028133392, y: 177}
-  blackboard:
-    isAlive: 1
-    targetOffset: {x: 0, y: 0, z: 0}
-    player: {fileID: 0}
-    objectToThrow: {fileID: 0}
-  agent: {fileID: 0}
-  Description: 
-  child: {fileID: -5975384528630235647}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e33c47baf7b17b546b34b6d1c3337792, type: 3}
-  m_Name: GhostBT
-  m_EditorClassIdentifier: 
-  rootNode: {fileID: -8470358048331035460}
-  treeState: 0
-  nodes:
-  - {fileID: -8470358048331035460}
-  - {fileID: -1755173599907247176}
-  - {fileID: -5975384528630235647}
-  - {fileID: 1466152704712925617}
-  - {fileID: 7091525824128812642}
-  - {fileID: 8036014419352318064}
-  - {fileID: -3379465695954714516}
-  - {fileID: 4509301313226200187}
-  - {fileID: 2922691148670767998}
-  - {fileID: -2336247821730887257}
-  board:
-    isAlive: 1
-    targetOffset: {x: 0, y: 0, z: 0}
-    player: {fileID: 0}
-    objectToThrow: {fileID: 0}
---- !u!114 &1466152704712925617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a752b95571aead47996a19d33fac6bd, type: 3}
-  m_Name: DeathCheck
-  m_EditorClassIdentifier: 
-  state: 1
-  started: 0
-  GUID: ff7b1547f84712e459a1da3f3d4dc433
-  position: {x: -319.9999, y: 513}
-  blackboard:
-    isAlive: 1
-    targetOffset: {x: 1.1394098, y: -0.071993604, z: -0.40116733}
-    player: {fileID: 0}
-    objectToThrow: {fileID: 0}
-  agent: {fileID: 0}
-  Description: 
---- !u!114 &2922691148670767998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d9aa1cc9767b7b46ba9e4604812bbe5, type: 3}
-  m_Name: WaitNode
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 1
-  GUID: cc6e796b85397534181cb88a22d621b8
-  position: {x: 0, y: 656}
-  blackboard:
-    isAlive: 1
-    targetOffset: {x: 1.1394098, y: -0.071993604, z: -0.40116733}
-    player: {fileID: 0}
-    objectToThrow: {fileID: 0}
-  agent: {fileID: 0}
-  Description: time before new scan
-  duration: 1
---- !u!114 &4509301313226200187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e0177f02c5bd845b7d8e5aeb6902f1, type: 3}
-  m_Name: GhostFollowTarget
-  m_EditorClassIdentifier: 
-  state: 2
-  started: 0
-  GUID: 3e97afc47ee8534449b05ca0b2958361
-  position: {x: -169.9999, y: 655.99994}
-  blackboard:
-    isAlive: 1
-    targetOffset: {x: 1.1394098, y: -0.071993604, z: -0.40116733}
-    player: {fileID: 0}
-    objectToThrow: {fileID: 0}
-  agent: {fileID: 0}
-  Description: 
---- !u!114 &7091525824128812642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43d5421c75d33d947b32024543f25e55, type: 3}
-  m_Name: GetTransformInSphere
-  m_EditorClassIdentifier: 
-  state: 2
-  started: 0
-  GUID: 03510ef41dde19242aeba3560a285cef
-  position: {x: -254, y: 177}
-  blackboard:
-    isAlive: 1
-    targetOffset: {x: 0, y: 0, z: 0}
-    player: {fileID: 0}
-    objectToThrow: {fileID: 0}
-  agent: {fileID: 0}
-  Description: 
---- !u!114 &8036014419352318064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bae177942135b14c91efd7f80faf0a5, type: 3}
-  m_Name: SequencerNode
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 1
-  GUID: 400cefa91177ddb4798982fc64fd4a79
-  position: {x: 0, y: 47}
-  blackboard:
-    isAlive: 1
-    targetOffset: {x: 0, y: 0, z: 0}
-    player: {fileID: 0}
-    objectToThrow: {fileID: 0}
-  agent: {fileID: 0}
-  Description: 
-  children:
-  - {fileID: -2336247821730887257}
-  - {fileID: 7091525824128812642}
-  - {fileID: -1755173599907247176}

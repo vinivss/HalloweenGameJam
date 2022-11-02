@@ -140,6 +140,7 @@ public class InputManagement : MonoBehaviour
 
     private bool OnSlope()
     {
+        
         if(Physics.Raycast(transform.position, Vector3.down, out slopeHit, playerHeight / 2 + 0.5f))
         {
             if(slopeHit.normal != Vector3.up)

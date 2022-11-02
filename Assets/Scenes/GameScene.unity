@@ -1192,7 +1192,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7328638223369194267, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7328638223386772116, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
       propertyPath: m_IsActive
@@ -1201,6 +1201,10 @@ PrefabInstance:
     - target: {fileID: 7328638223699911740, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328638224484015298, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.92
       objectReference: {fileID: 0}
     - target: {fileID: 7328638224683577053, guid: cd91291b47a92af43bf678394077c7e7, type: 3}
       propertyPath: m_IsActive
@@ -2590,11 +2594,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 41721065fad99de4381327ecdd1a1500, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7944459
+      value: 15.44
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 41721065fad99de4381327ecdd1a1500, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 7.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 41721065fad99de4381327ecdd1a1500, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2630,7 +2634,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 6f946a58e8eefc24885be1572d752997, type: 2}
     - target: {fileID: 919132149155446097, guid: 41721065fad99de4381327ecdd1a1500, type: 3}
       propertyPath: m_Name
-      value: Projectile pumpkin (UNTEXTURED)
+      value: Wilson
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41721065fad99de4381327ecdd1a1500, type: 3}
