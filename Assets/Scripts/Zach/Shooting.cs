@@ -24,6 +24,7 @@ public class Shooting : MonoBehaviour
     public bool buffer = false;
 
     public Animator m_Animator;
+    public AirBar breathBar;
 
     Rigidbody pRB;
     private void Awake()
@@ -32,6 +33,7 @@ public class Shooting : MonoBehaviour
     }
     void Update()
     {
+        breathBar.SetBreath(breathmeter);
         SetWalkAnim();
 
         if (breathmeter < 100)
@@ -82,7 +84,7 @@ public class Shooting : MonoBehaviour
     IEnumerator Regen()
     {
         buffer = true;
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.1f);
         breathmeter += replenishRate;
         buffer = false;
     }
