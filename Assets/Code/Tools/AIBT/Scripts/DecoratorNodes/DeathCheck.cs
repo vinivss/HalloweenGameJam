@@ -18,8 +18,11 @@ public class DeathCheck : AIActionNode
 
     protected override State OnUpdate()
     {
-        if (!blackboard.isAlive)
+        if (agent.currentHealth <= 0)
+        {
+            blackboard.isAlive = false;
             return State.SUCC;
+        }
        return State.FAIL;
     }
 }

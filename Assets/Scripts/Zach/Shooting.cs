@@ -89,7 +89,7 @@ public class Shooting : MonoBehaviour
         yield return new WaitForSeconds(reloadtime);
         breathmeter = 100;
         reloading = false;
-        inhaler.SetActive(true);
+        inhaler.SetActive(false);
 
     }
     void ShootLazer()
