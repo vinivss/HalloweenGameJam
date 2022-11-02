@@ -24,6 +24,8 @@ public class Shooting : MonoBehaviour
     public bool buffer = false;
 
     public Animator m_Animator;
+    public AirBar breathBar;
+    public GameObject inhaler;
 
     Rigidbody pRB;
     private void Awake()
@@ -32,6 +34,7 @@ public class Shooting : MonoBehaviour
     }
     void Update()
     {
+        breathBar.SetBreath(breathmeter);
         SetWalkAnim();
 
         if (breathmeter < 100)
@@ -74,16 +77,20 @@ public class Shooting : MonoBehaviour
     IEnumerator Regen()
     {
         buffer = true;
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.1f);
         breathmeter += replenishRate;
         buffer = false;
     }
     IEnumerator Reload()
     {
         reloading = true;
+        inhaler.SetActive(true);
+        m_Animator.Play("reload_anim");
         yield return new WaitForSeconds(reloadtime);
         breathmeter = 100;
         reloading = false;
+        inhaler.SetActive(true);
+
     }
     void ShootLazer()
     {
@@ -120,7 +127,15 @@ public class Shooting : MonoBehaviour
         float randomfloat = Random.Range(1.0f, 2.0f);
         int randomint = (int)Mathf.Round(randomfloat);
 
-        m_Animator.SetInteger("AnimCycle", randomint);
+        if(randomint == 1)
+        {
+            m_Animator.Play("trumpet_attack_1E");
+        }
+
+        if (randomint == 2)
+        {
+            m_Animator.Play("trumpet_attack_2D");
+        }
         yield return new WaitForSeconds(.25f);
         m_Animator.SetBool("Attacking", false);
     }
