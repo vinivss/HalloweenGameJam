@@ -27,11 +27,11 @@ public class lazer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        hitPlayer = other.GetComponent<AIAgent>();
 
         //Debug.LogError("Colliding");
         if (other.transform.tag == "Enemy")
         {
+            hitPlayer = other.GetComponent<AIAgent>();
             hitPlayer.currentHealth -= damage;
             Debug.Log("enemyHealth:" + hitPlayer.currentHealth);
             Destroy(gameObject);

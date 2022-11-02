@@ -63,7 +63,7 @@ public class AIAgent : MonoBehaviour
         transform = gameObject.transform;
         thisGameObject = gameObject;
         navMesh = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         rigidbodies = GetComponentsInChildren<Rigidbody>();
         sensor = GetComponent<AiSensor>();
         aggroRange = GetComponent<AggroRange>();

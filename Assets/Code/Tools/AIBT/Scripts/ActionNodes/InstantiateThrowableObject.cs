@@ -6,6 +6,7 @@ using Tools.Trees.AI;
 public class InstantiateThrowableObject : AIActionNode
 {
     [SerializeField] int projectileSpeed;
+
     protected override void OnStart()
     {
         

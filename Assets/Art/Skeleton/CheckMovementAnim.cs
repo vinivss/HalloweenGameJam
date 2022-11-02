@@ -5,20 +5,20 @@ using UnityEngine.AI;
 
 public class CheckMovementAnim : MonoBehaviour
 {
-    Animator anim;
-    Rigidbody rb;
+    [SerializeField]Animator anim;
+    NavMeshAgent agent;
     private void Awake()
     {
-       anim = GetComponent<Animator>();
-       rb = GetComponent<Rigidbody>();
+       anim = GetComponentInChildren<Animator>();
+       agent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(rb.velocity.x > 0.1f)
+        if(agent.velocity.x > 0 || agent.velocity.z >0)
         {
-            anim.SetBool("isMoving", true);
+            anim.SetBool("IsMoving", true);
         }
     }
 }

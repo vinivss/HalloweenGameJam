@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 5257800289649708803}
   - component: {fileID: 5257800289649708857}
   - component: {fileID: 5257800289649708858}
+  - component: {fileID: 3330671119792091823}
   m_Layer: 0
   m_Name: GhostEnemy
   m_TagString: Enemy
@@ -211,9 +212,9 @@ MonoBehaviour:
   MsensorRange: {fileID: 0}
   RsensorRange: {fileID: 0}
   playerOverlap: {fileID: 0}
-  waypoints: []
   navMesh: {fileID: 0}
   currentHealth: 0
+  throwPoint: {fileID: 0}
 --- !u!114 &5257800289649708861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adfd52aa2bf4ca64591cc2842e72405c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 10
+  distance: 3
   angle: 40
   height: 1
   meshColr: {r: 1, g: 0, b: 1, a: 1}
@@ -296,6 +297,20 @@ CapsuleCollider:
   m_Height: 2.7194703
   m_Direction: 1
   m_Center: {x: 0, y: 1.4538447, z: 0}
+--- !u!114 &3330671119792091823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5257800289649708802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84d2f19d3cf55147b66b3074985b3c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  range: {fileID: 0}
 --- !u!1 &5561517864375465060
 GameObject:
   m_ObjectHideFlags: 0

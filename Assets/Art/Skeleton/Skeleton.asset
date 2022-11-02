@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   GUID: 2da182c9811efa54681167c14a19b3f6
-  position: {x: 49, y: 1233}
+  position: {x: -8.050003, y: 1090.5001}
   blackboard:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
@@ -38,7 +38,7 @@ MonoBehaviour:
   state: 0
   started: 0
   GUID: 97054da7a2b110745be0a595b3a0a474
-  position: {x: 623.5207, y: 1044.4999}
+  position: {x: 550.00006, y: 916.9998}
   blackboard:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
@@ -71,32 +71,6 @@ MonoBehaviour:
   agent: {fileID: 0}
   Description: 
   child: {fileID: -1747595531277963667}
---- !u!114 &-8488598226877356436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01e0b7357cf808048831674ae088d6b9, type: 3}
-  m_Name: SelectRandomChild
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  GUID: a4fd12f0991124a4db4b1b55d7bccbed
-  position: {x: 50, y: 913.5}
-  blackboard:
-    isAlive: 0
-    targetOffset: {x: 0, y: 0, z: 0}
-    player: {fileID: 0}
-    objectToThrow: {fileID: 0}
-  agent: {fileID: 0}
-  Description: 
-  children:
-  - {fileID: -5780872448552000859}
-  - {fileID: 8121874362290840732}
 --- !u!114 &-7459969901072894966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +97,31 @@ MonoBehaviour:
   children:
   - {fileID: 5367742717446841313}
   - {fileID: 2198521593687248025}
-  - {fileID: -8488598226877356436}
+  - {fileID: 8121874362290840732}
+--- !u!114 &-7156186194518009230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d9aa1cc9767b7b46ba9e4604812bbe5, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 27631cd9f51796445a548549ac8a4aac
+  position: {x: -516.00006, y: 959}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+    objectToThrow: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+  duration: 3
 --- !u!114 &-7148406449775813663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +148,8 @@ MonoBehaviour:
   children:
   - {fileID: 4842966428134922016}
   - {fileID: -8744492252937337644}
---- !u!114 &-5780872448552000859
+  - {fileID: -5524895449850479795}
+--- !u!114 &-5524895449850479795
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,13 +158,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e0177f02c5bd845b7d8e5aeb6902f1, type: 3}
-  m_Name: GhostFollowTarget
+  m_Script: {fileID: 11500000, guid: 8d9aa1cc9767b7b46ba9e4604812bbe5, type: 3}
+  m_Name: WaitNode
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  GUID: d0cea227e5df8d749b1d804eb7d6a580
-  position: {x: -38, y: 1074}
+  GUID: a640d75792a94b2489936dba9ea7966b
+  position: {x: 699.9999, y: 916.9998}
   blackboard:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
@@ -173,6 +172,7 @@ MonoBehaviour:
     objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
+  duration: 1
 --- !u!114 &-5211537249334359380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,7 +188,7 @@ MonoBehaviour:
   state: 0
   started: 0
   GUID: 87fabb1aba49fcb4db1a03f0c420c5c4
-  position: {x: 212, y: 1233}
+  position: {x: 154.95001, y: 1090.5001}
   blackboard:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
@@ -223,6 +223,7 @@ MonoBehaviour:
   - {fileID: 488739174932280768}
   - {fileID: 7454909912443537137}
   - {fileID: 2587759219561317113}
+  - {fileID: -7156186194518009230}
 --- !u!114 &-1747595531277963667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,7 +266,7 @@ MonoBehaviour:
   state: 0
   started: 0
   GUID: 95d71e37449bd674085930988df7abd6
-  position: {x: -645.00006, y: 1056}
+  position: {x: -848.79724, y: 1098}
   blackboard:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
@@ -273,6 +274,30 @@ MonoBehaviour:
     objectToThrow: {fileID: 0}
   agent: {fileID: 0}
   Description: 
+--- !u!114 &-1530096884886490215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d9aa1cc9767b7b46ba9e4604812bbe5, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 6e23f6a152de12a40bf57898207c7c87
+  position: {x: 507.95004, y: 1090.5001}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+    objectToThrow: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+  duration: 3
 --- !u!114 &-208529603042336749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,7 +313,7 @@ MonoBehaviour:
   state: 0
   started: 0
   GUID: 87bbe8dc65f23bb41b3eb2a4a14107ec
-  position: {x: -816, y: 1056}
+  position: {x: -1019.7973, y: 1098}
   blackboard:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
@@ -328,19 +353,21 @@ MonoBehaviour:
   - {fileID: 7986566851601106270}
   - {fileID: 5367742717446841313}
   - {fileID: 2198521593687248025}
-  - {fileID: -8488598226877356436}
-  - {fileID: -5780872448552000859}
   - {fileID: 8121874362290840732}
   - {fileID: -8847795912464041941}
   - {fileID: -5211537249334359380}
   - {fileID: -7148406449775813663}
   - {fileID: 4842966428134922016}
   - {fileID: -8744492252937337644}
+  - {fileID: -1530096884886490215}
+  - {fileID: -7156186194518009230}
+  - {fileID: -5524895449850479795}
+  - {fileID: 7178520621660744368}
   board:
-    isAlive: 0
+    isAlive: 1
     targetOffset: {x: 0, y: 0, z: 0}
     player: {fileID: 0}
-    objectToThrow: {fileID: 0}
+    objectToThrow: {fileID: 4960446698080734359, guid: 22614a98cc91f0f4fb09035a5f33d2e3, type: 3}
 --- !u!114 &78905874172726784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,7 +406,7 @@ MonoBehaviour:
   state: 0
   started: 0
   GUID: 59f1890d671fbea46bd04b318f52b097
-  position: {x: -816, y: 893.00006}
+  position: {x: -1019.7973, y: 935}
   blackboard:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
@@ -403,7 +430,7 @@ MonoBehaviour:
   state: 0
   started: 0
   GUID: 0743dc2f37a5b9448a7297719e568b60
-  position: {x: -158, y: 893}
+  position: {x: -158.00015, y: 893}
   blackboard:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
@@ -426,7 +453,7 @@ MonoBehaviour:
   state: 0
   started: 0
   GUID: f5dedbbaf415d06428e3efb6abb69b32
-  position: {x: -462, y: 917}
+  position: {x: -665.7973, y: 959}
   blackboard:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
@@ -449,7 +476,7 @@ MonoBehaviour:
   state: 0
   started: 0
   GUID: 12053f4f3f598264d949b91fbe20a970
-  position: {x: -258.54877, y: 252.99998}
+  position: {x: -248.65004, y: 285.50006}
   blackboard:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
@@ -472,7 +499,7 @@ MonoBehaviour:
   state: 0
   started: 0
   GUID: f3acdbb5db7a53f41bdaff1d3e017902
-  position: {x: 437.74896, y: 1041.4999}
+  position: {x: 392, y: 914}
   blackboard:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
@@ -528,6 +555,30 @@ MonoBehaviour:
   agent: {fileID: 0}
   Description: 
   child: {fileID: 8181402669225029786}
+--- !u!114 &7178520621660744368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4192ca9645d5e254a885a58572425a9a, type: 3}
+  m_Name: InstantiateThrowableObject
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  GUID: 418f819a369d6b7459d81f17ec9ab6a3
+  position: {x: 305.94998, y: 1090.5001}
+  blackboard:
+    isAlive: 0
+    targetOffset: {x: 0, y: 0, z: 0}
+    player: {fileID: 0}
+    objectToThrow: {fileID: 0}
+  agent: {fileID: 0}
+  Description: 
+  projectileSpeed: 10
 --- !u!114 &7454909912443537137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,7 +594,7 @@ MonoBehaviour:
   state: 0
   started: 0
   GUID: de10507cbba017c45accab4fd3df53e3
-  position: {x: -627.00006, y: 893.00006}
+  position: {x: -830.7973, y: 935}
   blackboard:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
@@ -590,7 +641,7 @@ MonoBehaviour:
   state: 0
   started: 0
   GUID: 0855a9e5ade001a4db23d046479bd936
-  position: {x: 137, y: 1076.5}
+  position: {x: 79.94998, y: 934.5001}
   blackboard:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}
@@ -601,6 +652,8 @@ MonoBehaviour:
   children:
   - {fileID: -8847795912464041941}
   - {fileID: -5211537249334359380}
+  - {fileID: 7178520621660744368}
+  - {fileID: -1530096884886490215}
 --- !u!114 &8181402669225029786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,8 +678,8 @@ MonoBehaviour:
   agent: {fileID: 0}
   Description: 
   children:
-  - {fileID: -2478089186372365690}
   - {fileID: 8944671967355200418}
+  - {fileID: -2478089186372365690}
   - {fileID: -7459969901072894966}
   - {fileID: -7148406449775813663}
 --- !u!114 &8944671967355200418
@@ -644,7 +697,7 @@ MonoBehaviour:
   state: 0
   started: 0
   GUID: 16084bfb0aea447449798c266efdfbec
-  position: {x: -430.16, y: 579.71}
+  position: {x: -756, y: 559}
   blackboard:
     isAlive: 0
     targetOffset: {x: 0, y: 0, z: 0}

@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Tools.Trees.AI;
+using UnityEditor.Experimental.RestService;
 
 public class SkeletonThrowAnim : AIActionNode
 {
+    bool playedOnce;
     protected override void OnStart()
     {
         
@@ -18,6 +20,16 @@ public class SkeletonThrowAnim : AIActionNode
     protected override State OnUpdate()
     {
         agent.animator.SetBool("Shoot", true);
-        return State.SUCC;
+
+        if (agent.animator.GetBool("Shoot") == true && playedOnce == true)
+        {
+            agent.animator.SetBool("Shoot", false);
+            return State.SUCC;
+        }
+
+        playedOnce = true;
+        return State.RUN;
     }
+
+
 }
