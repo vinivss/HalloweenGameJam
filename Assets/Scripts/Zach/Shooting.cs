@@ -122,8 +122,17 @@ public class Shooting : MonoBehaviour
         float randomfloat = Random.Range(1.0f, 2.0f);
         int randomint = (int)Mathf.Round(randomfloat);
 
-        m_Animator.SetInteger("AnimCycle", randomint);
+        if (randomint == 1)
+        {
+            m_Animator.Play("trumpet_attack_1E");
+        }
+
+        if (randomint == 2)
+        {
+            m_Animator.Play("trumpet_attack_2D");
+        }
         yield return new WaitForSeconds(.25f);
         m_Animator.SetBool("Attacking", false);
     }
+
 }
