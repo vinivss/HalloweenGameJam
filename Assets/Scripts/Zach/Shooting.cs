@@ -67,15 +67,7 @@ public class Shooting : MonoBehaviour
     //setting up the walking animation
     public void SetWalkAnim()
     {
-
-        if (pRB.velocity.x > 0 || pRB.velocity.z > 0)
-        {
-            m_Animator.SetBool("Walking", true);
-        }
-        else if (!(pRB.velocity.x > 0 || pRB.velocity.z > 0))
-        {
-            m_Animator.SetBool("Walking", false);
-        }
+        m_Animator.SetFloat("Speed", Mathf.Clamp(pRB.velocity.magnitude, 0, 8));
     }
 
 

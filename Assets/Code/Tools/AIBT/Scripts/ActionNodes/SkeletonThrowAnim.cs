@@ -23,6 +23,7 @@ public class SkeletonThrowAnim : AIActionNode
 
         if (agent.animator.GetBool("Shoot") == true && playedOnce == true)
         {
+            playedOnce = false;
             agent.animator.SetBool("Shoot", false);
             return State.SUCC;
         }
