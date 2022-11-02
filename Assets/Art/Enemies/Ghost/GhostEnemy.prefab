@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tree: {fileID: 11400000, guid: 711e7768f1d29c542857601e32daff75, type: 2}
+  particle: {fileID: 919132149155446097, guid: f1ab4f61e9f13b6409a7459410e4567e, type: 3}
 --- !u!114 &5257800289649708857
 MonoBehaviour:
   m_ObjectHideFlags: 0
