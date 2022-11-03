@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 3290588325522091744}
   m_Layer: 0
   m_Name: Pumpkin AI_Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   scanFrequency: 30
   layers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
 --- !u!114 &3290588325522091754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tree: {fileID: 11400000, guid: 6c8d7c915ba01164a9454677ea2deceb, type: 2}
-  particle: {fileID: 0}
+  particle: {fileID: 5080038340453888943, guid: 871d31745d7b4884e9caf3488bb2cf9a, type: 3}
 --- !u!114 &3290588325522091744
 MonoBehaviour:
   m_ObjectHideFlags: 0
