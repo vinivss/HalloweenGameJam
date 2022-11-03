@@ -74,11 +74,7 @@ public class AIAgent : MonoBehaviour
         
         //make sure that on start all ragdolls are deactivated
         StartRigidbodies();
-        foreach(var rigidBody in rigidbodies)
-        {
-            rigidBody.gameObject.AddComponent<HitBox>();
-        }
-        
+
     }
 
     // Update is called once per frame

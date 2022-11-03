@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine.UIElements;
-using UnityEditor.UIElements;
 using System;
 using UnityEditor;
 
+#if(UNITY_EDITOR)
 namespace Tools.Trees.AI
 {
+
     public class AINodeView : UnityEditor.Experimental.GraphView.Node
     {
         public Action<AINodeView> OnNodeSelected;
@@ -32,7 +33,7 @@ namespace Tools.Trees.AI
 
             Label descriptionLabel = this.Q<Label>("Description");
             descriptionLabel.bindingPath = "Description";
-            descriptionLabel.Bind(new SerializedObject(node));
+            //descriptionLabel.Bind(new SerializedObject(node));
         }
 
         private void SetupClasses()
@@ -169,3 +170,4 @@ namespace Tools.Trees.AI
         }
     }
 }
+#endif
