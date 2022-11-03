@@ -24,6 +24,7 @@ public class WaveSpawner : MonoBehaviour
     
     public TMP_Text eCount;
     public TMP_Text wCount;
+   
 
     void Update()
     {
